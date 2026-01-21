@@ -1,36 +1,33 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/layout/navbar";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-export const metadata: Metadata = {
-  title: " WEL-COME TO MY PORTFOLIO",
-  description: "CREATED BY : KALYANI RAHUL SABLE",
-};
+import Navbar from "app/layout.tsx";
+import Footer from "components/footer.tsx";
+";
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <Navbar/>
+      <body>
+        <Navbar />
         {children}
-        
+export default function Footer() {
+  return (
+    <footer className="w-full flex justify-center mt-20 mb-6">
+      <div className="w-[95%] max-w-7xl text-center text-sm text-gray-500">
+        © {new Date().getFullYear()} Monovo. All rights reserved.
+      </div>
+    </footer>
+  );
+}
+
+
+
+
+
+        <Footer />
       </body>
     </html>
   );

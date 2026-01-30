@@ -1,13 +1,23 @@
-import Hero from "@/components/feature/homepage/hero";
+import Hero from "@/components/Hero";
+import Services from "@/component/service"push ;
 
-
-export default function Page() {
+export default function Home() {
   return (
-    <main>
-      <Hero/>
-    </main>
+  <>
+      <Hero />
+      <Services />
+    </>
   );
 }
+
+
+
+      
+  
+      
+  
+
+
 
 
 

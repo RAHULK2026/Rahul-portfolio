@@ -1,54 +1,56 @@
+"use client";
+
+import { useState } from "react";
+import Image from "next/image";
+
 const services = [
   {
-    title: "Agile Business Analysis",
-    description:
-      "Understanding business needs and translating them into clear, actionable requirements aligned with Agile practices.",
+    title: "Business Analysis",
+    desc: "Data-driven insights for smart decisions.",
+    img: "/services/analysis.jpg",
   },
   {
-    title: "Project Management",
-    description:
-      "End-to-end project planning, execution, and delivery with a focus on timelines, quality, and stakeholder alignment.",
+    title: "Product Strategy",
+    desc: "Product vision aligned with business goals.",
+    img: "/services/strategy.jpg",
   },
   {
-    title: "Requirement to Technical Mapping",
-    description:
-      "Bridging the gap between business teams and technical teams for scalable and efficient solutions.",
-  },
-  {
-    title: "Data Tracking & Reporting",
-    description:
-      "Leveraging data insights to track performance, measure outcomes, and support informed decision-making.",
+    title: "UX Research",
+    desc: "User research for better experience.",
+    img: "/services/ux.jpg",
   },
 ];
 
 export default function Services() {
+  const [active, setActive] = useState(services[0]);
+
   return (
-    <section id="services" className="w-full bg-gray-50 py-20 md:py-28">
-      <div className="max-w-7xl mx-auto px-4 md:px-16">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-          Services
-        </h2>
+    <section className="max-w-7xl mx-auto px-4 py-20 grid md:grid-cols-2 gap-12">
 
-        <p className="mt-4 text-gray-600 max-w-2xl">
-          Helping organizations achieve clarity, efficiency, and growth through
-          Agile methodologies, structured analysis, and data-driven insights.
-        </p>
+      {/* Right on mobile, left on desktop */}
+      <div className="order-2 md:order-1">
+        <h2 className="text-3xl font-semibold mb-4">{active.title}</h2>
+        <p className="text-gray-600 mb-6">{active.desc}</p>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="rounded-2xl bg-white p-6 shadow-sm hover:shadow-md transition"
-            >
-              <h3 className="text-lg font-semibold text-gray-900">
-                {service.title}
-              </h3>
-              <p className="mt-3 text-sm text-gray-600">
-                {service.description}
-              </p>
-            </div>
-          ))}
+        <div className="relative h-56 md:h-64 rounded-xl overflow-hidden">
+          <Image src={active.img} alt="" fill className="object-cover" />
         </div>
+      </div>
+
+      <div className="order-1 md:order-2 flex flex-col gap-6">
+        {services.map((s) => (
+          <h3
+            key={s.title}
+            onMouseEnter={() => setActive(s)}
+            className={`cursor-pointer text-xl md:text-2xl transition ${
+              active.title === s.title
+                ? "text-black font-semibold"
+                : "text-gray-400 hover:text-black"
+            }`}
+          >
+            {s.title}
+          </h3>
+        ))}
       </div>
     </section>
   );

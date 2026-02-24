@@ -1,11 +1,15 @@
-import Hero from "./components/feature/homepage/hero";
-import Services from "./components/service";
+import Service from "@/components/feature/homepage/service";
+import Hero from "@/components/section/hero";
+import Services from "@/components/feature/homepage/service";
+
+
 
 export default function Page() {
   return (
     <>
       <Hero />
       <Services />
+      
     </>
   );
 }

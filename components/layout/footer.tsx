@@ -46,7 +46,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-400">
-          <p>© 2025 monovo® Studio. All rights reserved.</p>
+          <p>© 2026 monovo® Studio. All rights reserved.</p>
 
           <button className="flex items-center gap-2 bg-white text-black px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-200 transition">
             Let’s Talk

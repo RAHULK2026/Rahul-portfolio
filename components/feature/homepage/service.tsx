@@ -7,17 +7,17 @@ const services = [
   {
     title: "Business Analysis",
     desc: "Data-driven insights for smart decisions.",
-    img: "/services/analysis.jpg",
+    img: "/images/business-analyst.jpg",
   },
   {
     title: "Product Strategy",
     desc: "Product vision aligned with business goals.",
-    img: "/services/strategy.jpg",
+    img: "/images/product-strategy.jpg",
   },
   {
     title: "UX Research",
     desc: "User research for better experience.",
-    img: "/services/ux.jpg",
+    img: "/images/ux-research.jpg",
   },
 ];
 
@@ -55,3 +55,4 @@ export default function Services() {
     </section>
   );
 }
+

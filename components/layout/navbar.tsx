@@ -13,7 +13,7 @@ export default function Navbar() {
 
           {/* Logo */}
           <div className="font-semibold text-lg">
-            Monovo<sup>®</sup>
+            Business Analyst<sup>®</sup>
           </div>
 
           {/* Desktop Menu */}

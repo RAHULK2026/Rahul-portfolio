@@ -1,30 +1,25 @@
-export default function Hero() {
+import BackgroundPattern from "@/components/common/BackgroundPattern";
+
+const Hero = () => {
   return (
-    <section className="px-6 mt-6">
-      <div
-        className="max-w-7xl mx-auto rounded-3xl min-h-[75vh] flex items-center"
-        style={{
-          backgroundImage: "url('/hero-bg.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        {/* Dark overlay */}
-        <div className="w-full h-full bg-black/70 rounded-3xl flex items-center">
-          <div className="px-12 max-w-2xl">
+    <section className="relative overflow-hidden px-4 pt-24 pb-16 sm:px-6 lg:px-8">
+      <BackgroundPattern />
 
-            <h1 className="text-white text-6xl font-bold leading-tight">
-              Business Analysis <br /> That Drives Better Decisions
-            </h1>
+      <div className="mx-auto max-w-7xl">
+        <h1 className="text-4xl font-bold text-slate-900 sm:text-5xl md:text-6xl">
+          Business Analyst
+        </h1>
 
-            <p className="mt-6 text-gray-300 text-lg">
-              Helping organizations turn complex data into clear insights,
-              optimize processes, and achieve measurable growth.
-            </p>
+        <p className="mt-4 max-w-2xl text-base text-slate-600 sm:text-lg">
+          Data-driven insights and smart digital solutions for business growth.
+        </p>
 
-          </div>
-        </div>
+        <button className="mt-8 rounded-full bg-black px-6 py-3 text-white">
+          Let’s Talk
+        </button>
       </div>
     </section>
   );
-}
+};
+
+export default Hero;

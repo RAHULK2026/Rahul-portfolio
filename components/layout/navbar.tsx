@@ -13,15 +13,15 @@ export default function Navbar() {
 
           {/* Logo */}
           <div className="font-semibold text-lg">
-            Business Analyst<sup>®</sup>
+            Business Analyst
           </div>
 
           {/* Desktop Menu */}
           <nav className="hidden md:flex gap-8 text-sm">
-            <Link href="#">Home</Link>
+            
             <Link href="#">About</Link>
             <Link href="#">Work</Link>
-            <Link href="#">Blog</Link>
+            
           </nav>
 
           {/* Desktop Button */}

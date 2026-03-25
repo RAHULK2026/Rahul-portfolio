@@ -9,7 +9,7 @@ export default function Footer() {
           {/* Logo + Text */}
           <div className="max-w-md">
             <h2 className="text-2xl font-semibold tracking-tight">
-              monovo<span className="text-gray-400">®</span>
+              Business Analyst
             </h2>
             <p className="mt-3 text-gray-400 text-sm leading-relaxed">
               Beyond websites. Real strategies to fuel your growth.
@@ -46,7 +46,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-400">
-          <p>© 2026 monovo® Studio. All rights reserved.</p>
+          <p>© 2026 Business Analyst. All rights reserved.</p>
 
           <button className="flex items-center gap-2 bg-white text-black px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-200 transition">
             Let’s Talk

@@ -17,7 +17,7 @@ const services = [
   {
     title: "UX Research",
     desc: "User research for better experience.",
-    img: "/images/ux-reserch.jpg",
+    img: "/images/ux-resem rch.jpg",
   },
 ];
 

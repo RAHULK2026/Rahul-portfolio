@@ -21,6 +21,9 @@ export default function Navbar() {
             
             <Link href="#">About</Link>
             <Link href="#">Work</Link>
+             <Link href="#"> Experience</Link>
+              <Link href="#">Blog</Link>
+            <Link href="#">Contact</Link>
             
           </nav>
 
